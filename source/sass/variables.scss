@@ -1,0 +1,40 @@
+// Цвета
+$color-accent-light: rgb(240, 234, 228);
+$color-accent: rgb(168, 123, 98);
+// $color-accent-hover: rgb(34, 121, 159);
+$color-black: rgb(29, 22, 19);
+$color-darker: rgb(0, 0, 0);
+// $color-black-a50: rgba(0, 0, 0, 0.5);
+// $color-dark-blue: rgb(27, 45, 55);
+// $color-dark-blue-a50: rgba(27, 45, 55, 0.5);
+$color-white: rgb(255, 255, 255);
+$color-white-a15: rgba(255, 255, 255, 0.15);
+$color-white-a75: rgba(255, 255, 255, 0.75);
+// $color-white-a10: rgba(255, 255, 255, 0.1);
+// $color-white-a20: rgba(255, 255, 255, 0.2);
+// $color-white-a50: rgba(255, 255, 255, 0.5);
+// $color-white-a80: rgba(255, 255, 255, 0.8);
+// $color-grey-light: rgb(205, 205, 205);
+$color-grey: rgb(155, 153, 151);
+// $color-grey-a20: rgba(98, 105, 98, 0.2);
+// $color-background: rgb(229, 229, 229);
+$color-decore-line: rgb(246, 245, 244);
+
+// Отступы
+$mobile-padding: 15px;
+$tablet-padding: 45px;
+$desktop-padding: 25px;
+
+// Размеры вьюпорта
+$mobile-width: 767.8px;
+$tablet-width: 1023.8px;
+$desktop-width: 1024px;
+
+$container: 1220px;
+
+// Шрифты
+$main-font: "Poppins", "Arial", sans-serif;
+$second-font: "Cormorant Garamond", "Times New Roman", serif;
+
+// Для ретинизации
+$retina-dppx: 1.5dppx;

@@ -1,0 +1,240 @@
+.header {
+  padding-top: 30px;
+  padding-bottom: 20px;
+  background-color: $color-white;
+  overflow: hidden;
+
+  @media (max-width: $tablet-width) {
+    padding-bottom: 30px;
+  }
+
+  @media (max-width: $mobile-width) {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+}
+
+.header--menu-open {
+  background-color: $color-accent;
+}
+
+.header__top {
+  display: flex;
+  position: relative;
+  align-items: flex-start;
+
+  @media (max-width: $tablet-width) {
+    min-height: 66px;
+    align-items: center;
+    z-index: 10;
+  }
+
+  @media (max-width: $mobile-width) {
+    min-height: 52px;
+  }
+}
+
+.header__logo {
+  margin-left: -33px;
+  width: 66px;
+  display: flex;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  color: $color-accent;
+
+
+  @media (max-width: $mobile-width) {
+    margin-left: -26px;
+    width: 52px;
+  }
+}
+
+.header__logo svg {
+  @media (max-width: $mobile-width) {
+    height: 52px;
+  }
+}
+
+.header--menu-open .header__logo {
+  color: $color-white;
+}
+
+.header__user-links {
+  margin: 0;
+  margin-left: auto;
+  padding: 0;
+  width: 40%;
+  display: flex;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 21px;
+  list-style: none;
+  order: 3;
+
+  @media (max-width: $tablet-width) {
+    display: none;
+  }
+}
+
+.header__user-item {
+  margin-top: 11px;
+  margin-left: 35px;
+}
+
+.header__user-item a {
+  color: inherit;
+}
+
+.header__cart-counter {
+  padding-left: 3px;
+}
+
+.header__search {
+  margin-right: auto;
+  padding-top: 3px;
+  width: 40%;
+  order: 1;
+
+  @media (max-width: $tablet-width) {
+    display: none;
+  }
+}
+
+.header__top-mobile-left {
+  display: none;
+
+  @media (max-width: $tablet-width) {
+    margin-right: auto;
+    width: 40%;
+    display: flex;
+    align-items: center;
+    order: 1;
+  }
+}
+
+.header__top-mobile-right {
+  display: none;
+
+  @media (max-width: $tablet-width) {
+    margin-left: auto;
+    width: 40%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    flex-wrap: wrap;
+    order: 3;
+  }
+}
+
+.header__top-mobile-right a,
+.header__top-mobile-left a {
+  margin-left: 15px;
+  padding: 4px 0;
+  display: flex;
+  color: inherit;
+}
+
+
+.header--menu-open .header__top-mobile-right,
+.header--menu-open .header__top-mobile-left {
+  color: $color-white;
+}
+
+.header__bottom {
+  margin-top: 41px;
+  padding-top: 18px;
+  position: relative;
+
+  &::before,
+  &::after {
+    content: '';
+    width: 9999px;
+    height: 1px;
+    display: block;
+    position: absolute;
+    top: 0;
+    background-color: $color-decore-line;
+  }
+
+  &::before {
+    right: 0;
+  }
+
+  &::after {
+    left: 0;
+  }
+
+  @media (max-width: $tablet-width) {
+    margin-top: 0;
+    padding-top: 0;
+
+    &::before,
+    &::after {
+      display: none;
+    }
+  }
+}
+
+.header__navigation {
+  @media (max-width: $tablet-width) {
+    margin: 0;
+    margin-top: 126px;
+    padding: 0 $tablet-padding;
+    padding-top: 10px;
+    display: block;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    text-align: left;
+    overflow-y: scroll;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateX(100%);
+    z-index: 10;
+    background-color: transparent;
+  }
+
+  @media (max-width: $mobile-width) {
+    margin-top: 92px;
+    padding-right: $mobile-padding;
+    padding-left: $mobile-padding;
+  }
+}
+
+.header--menu-open .header__navigation {
+  @media (max-width: $tablet-width) {
+    display: block;
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(0);
+  }
+}
+
+// .header.header--menu-open {
+//   height: 100vh;
+//   overflow: hidden;
+// }
+
+.nojs .header {
+  @media (max-width: $tablet-width) {
+    position: relative;
+  }
+}
+
+.nojs .header__navigation {
+  @media (max-width: $tablet-width) {
+    display: block;
+    height: auto;
+    position: relative;
+    top: auto;
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(0);
+    overflow-y: hidden;
+  }
+}
