@@ -105,7 +105,7 @@ document.documentElement.classList.remove('nojs');
   var swiper = new Swiper('.swiper-container', {
     slidesPerView: 2,
     slidesPerGroup: 2,
-    spaceBetween: 15,
+    spaceBetween: 30,
     loop: true,
 
     navigation: {
@@ -128,11 +128,6 @@ document.documentElement.classList.remove('nojs');
     },
 
     breakpoints: {
-      768: {
-        slidesPerView: 2,
-        slidesPerGroup: 2,
-        spaceBetween: 30,
-      },
 
       1024: {
         slidesPerView: 4,

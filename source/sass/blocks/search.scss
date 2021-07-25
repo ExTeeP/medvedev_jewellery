@@ -64,3 +64,15 @@
 .search__button--l0 {
   left: 0;
 }
+
+.nojs .search__button,
+.nojs .search__input {
+  color: $color-black;
+}
+
+.nojs .search__input {
+}
+
+.nojs .search__input::placeholder {
+  color: $color-grey;
+}

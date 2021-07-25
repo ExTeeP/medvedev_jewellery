@@ -1,0 +1,87 @@
+
+.intro {
+  min-height: 463px;
+  display: flex;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background-image: url("../img/intro-desktop.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-color: $color-accent;
+
+  @supports (background: url("../img/intro-desktop.webp")) {
+    background-image: url("../img/intro-desktop.webp");
+  }
+
+  @media (min-resolution: $retina-dppx) {
+    background-image: url("../img/intro-desktop@2x.jpg");
+
+    @supports (background: url("../img/intro-desktop@2x.webp")) {
+      background-image: url("../img/intro-desktop@2x.webp");
+    }
+  }
+
+  @media (max-width: $tablet-width) {
+    background-image: url("../img/intro-tablet.jpg");
+
+    @supports (background: url("../img/intro-tablet.webp")) {
+      background-image: url("../img/intro-tablet.webp");
+    }
+
+    @media (min-resolution: $retina-dppx) {
+      background-image: url("../img/intro-tablet@2x.jpg");
+
+      @supports (background: url("../img/intro-tablet@2x.webp")) {
+        background-image: url("../img/intro-tablet@2x.webp");
+      }
+    }
+  }
+
+  @media (max-width: $mobile-width) {
+    background-image: url("../img/intro-mobile.jpg");
+
+    @supports (background: url("../img/intro-mobile.webp")) {
+      background-image: url("../img/intro-mobile.webp");
+    }
+
+    @media (min-resolution: $retina-dppx) {
+      background-image: url("../img/intro-mobile@2x.jpg");
+
+      @supports (background: url("../img/intro-mobile@2x.webp")) {
+        background-image: url("../img/intro-mobile@2x.webp");
+      }
+    }
+  }
+}
+
+.intro p {
+  margin: 0;
+  font-family: $second-font;
+  font-weight: bold;
+  font-size: 45px;
+  line-height: 52px;
+  letter-spacing: 0.03em;
+  color: $color-white;
+
+  @media (max-width: $mobile-width) {
+    font-size: 38px;
+    line-height: 44px;
+  }
+}
+
+.intro span {
+  display: block;
+  font-style: italic;
+  font-weight: normal;
+  font-size: 38px;
+  line-height: 42px;
+  letter-spacing: normal;
+
+  @media (max-width: $mobile-width) {
+    font-size: 34px;
+    line-height: 38px;
+  }
+}

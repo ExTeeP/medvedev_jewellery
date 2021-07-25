@@ -58,4 +58,8 @@
   .burger__active .burger__line::after {
     background-color: $color-white;
   }
+
+  .nojs .burger {
+    display: none;
+  }
 }
