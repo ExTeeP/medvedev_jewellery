@@ -1,10 +1,10 @@
 .blog {
-  padding-top: 98px;
+  padding-top: 122px;
   padding-bottom: 15px;
   text-align: center;
 
   @media (max-width: $tablet-width) {
-    padding-top: 49px;
+    padding-top: 72px;
   }
 
   @media (max-width: $mobile-width) {
@@ -20,16 +20,10 @@
   font-size: 34px;
   line-height: 44px;
   color: $color-black;
+  letter-spacing: 0.03em;
 
   @media (max-width: $tablet-width) {
     margin-bottom: 15px;
-    font-size: 32px;
-    line-height: 45px;
-  }
-
-  @media (max-width: $mobile-width) {
-    font-size: 34px;
-    line-height: 44px;
   }
 }
 

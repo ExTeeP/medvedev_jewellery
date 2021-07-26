@@ -102,54 +102,73 @@ document.documentElement.classList.remove('nojs');
 
 // Свайпер
 (function () {
-  var swiper = new Swiper('.swiper-container', {
-    slidesPerView: 2,
-    slidesPerGroup: 2,
-    spaceBetween: 30,
-    loop: true,
+  if (document.querySelector('.product-slider')) {
 
-    navigation: {
-      nextEl: '.products-slider__button-next',
-      prevEl: '.products-slider__button-prev',
-    },
+    var swiper = new Swiper('.swiper-container', {
+      slidesPerView: 2,
+      slidesPerGroup: 2,
+      spaceBetween: 30,
+      loop: true,
 
-    pagination: {
-      el: '.products-slider__pagination',
-      type: 'bullets',
-      clickable: true,
-      bulletClass: 'products-slider__bullet',
-      bulletActiveClass: 'products-slider__bullet-active',
-
-      renderBullet: function (index, className) {
-        return (
-          '<button class="' + className + '">' + (index + 1) + '</button>'
-        );
+      navigation: {
+        nextEl: '.products-slider__button-next',
+        prevEl: '.products-slider__button-prev',
       },
-    },
 
-    breakpoints: {
+      pagination: {
+        el: '.products-slider__pagination',
+        type: 'bullets',
+        clickable: true,
+        bulletClass: 'products-slider__bullet',
+        bulletActiveClass: 'products-slider__bullet-active',
 
-      1024: {
-        slidesPerView: 4,
-        slidesPerGroup: 4,
-        spaceBetween: 30,
+        renderBullet: function (index, className) {
+          return (
+            '<button class="' + className + '">' + (index + 1) + '</button>'
+          );
+        },
       },
-    },
-  });
 
-  var setCounterSlides = function () {
-    var bullets = Array.from(document.querySelectorAll('.products-slider__bullet'));
-    var currentCounter = document.querySelector('.products-slider__counter-current');
-    var totalCounter = document.querySelector('.products-slider__counter-total');
-    var currentBullet = bullets.findIndex(function (item) {
-      return item.classList.contains('products-slider__bullet-active');
-    }) + 1;
+      breakpoints: {
 
-    totalCounter.textContent = bullets.length;
-    currentCounter.textContent = currentBullet;
-  };
+        1024: {
+          slidesPerView: 4,
+          slidesPerGroup: 4,
+          spaceBetween: 30,
+        },
+      },
+    });
 
-  window.addEventListener('optimizedResize', setCounterSlides);
-  window.addEventListener('load', setCounterSlides);
-  swiper.on('slideChangeTransitionEnd', setCounterSlides);
+    var setCounterSlides = function () {
+      var bullets = Array.from(document.querySelectorAll('.products-slider__bullet'));
+      var currentCounter = document.querySelector('.products-slider__counter-current');
+      var totalCounter = document.querySelector('.products-slider__counter-total');
+      var currentBullet = bullets.findIndex(function (item) {
+        return item.classList.contains('products-slider__bullet-active');
+      }) + 1;
+
+      totalCounter.textContent = bullets.length;
+      currentCounter.textContent = currentBullet;
+    };
+
+    window.addEventListener('optimizedResize', setCounterSlides);
+    window.addEventListener('load', setCounterSlides);
+    swiper.on('slideChangeTransitionEnd', setCounterSlides);
+  }
+})();
+
+// Аккордеон
+(function () {
+  if (document.querySelector('.faq')) {
+    var accordeon = document.querySelector('.faq__accordeon');
+    var accordeonItems = accordeon.querySelectorAll('.faq__item');
+    var buttons = accordeon.querySelectorAll('.faq__button');
+
+    buttons.forEach(function (it, i) {
+      it.addEventListener('click', function () {
+        accordeonItems[i].classList.toggle('faq__item--active');
+        it.classList.toggle('faq__button--close');
+      });
+    });
+  }
 })();
