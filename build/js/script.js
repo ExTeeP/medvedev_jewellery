@@ -102,7 +102,7 @@ document.documentElement.classList.remove('nojs');
 
 // Свайпер
 (function () {
-  if (document.querySelector('.product-slider')) {
+  if (document.querySelector('.products-slider')) {
 
     var swiper = new Swiper('.swiper-container', {
       slidesPerView: 2,
