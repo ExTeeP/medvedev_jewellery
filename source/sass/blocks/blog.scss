@@ -60,19 +60,22 @@
 }
 
 .blog__item {
-  max-height: 300px;
+  min-height: 300px;
   position: relative;
+
 }
 
 .blog__item--big {
-  max-height: 630px;
+  min-height: 630px;
   grid-column: 2 / span 1;
   grid-row: span 2;
   order: -1;
 
   @media (max-width: $tablet-width) {
+    min-height: 300px;
     grid-column: auto;
     grid-row: auto;
+    order: initial;
   }
 }
 

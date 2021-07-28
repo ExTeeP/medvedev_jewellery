@@ -44,7 +44,7 @@ document.documentElement.classList.remove('nojs');
   };
 
   var showerMenu = function () {
-    document.documentElement.classList.toggle('page--menu-open');
+    document.documentElement.classList.toggle('page--100vh');
     header.classList.toggle('header--menu-open');
     toggle.classList.toggle('burger__active');
     menu.classList.toggle('navigation--menu-open');
@@ -159,16 +159,68 @@ document.documentElement.classList.remove('nojs');
 
 // Аккордеон
 (function () {
-  if (document.querySelector('.faq')) {
-    var accordeon = document.querySelector('.faq__accordeon');
-    var accordeonItems = accordeon.querySelectorAll('.faq__item');
-    var buttons = accordeon.querySelectorAll('.faq__button');
+  if (document.querySelector('.accordeon')) {
+    var accordeon = document.querySelector('.accordeon');
+    var accordeonItems = accordeon.querySelectorAll('.accordeon__item');
+    var accordeonToggle = accordeon.querySelectorAll('.accordeon__toggle');
 
-    buttons.forEach(function (it, i) {
+    accordeonToggle.forEach(function (it, i) {
       it.addEventListener('click', function () {
-        accordeonItems[i].classList.toggle('faq__item--active');
-        it.classList.toggle('faq__button--close');
+        accordeonItems[i].classList.toggle('accordeon__open');
       });
+    });
+  }
+})();
+
+
+// Показ модального окна
+(function () {
+
+  // Открытыие модального окна
+  var showModal = function (element) {
+    document.documentElement.classList.add('page--100vh');
+    element.classList.add('active-modal');
+
+    document.addEventListener('keydown', onModalEscPress);
+    element.addEventListener('click', onOverlayClick);
+  };
+
+  // Закрытие модального окна
+  var closeModal = function () {
+    var element = document.querySelector('.active-modal');
+
+    document.documentElement.classList.remove('page--100vh');
+    element.classList.remove('active-modal');
+
+    document.removeEventListener('keydown', onModalEscPress);
+  };
+
+  var onOverlayClick = function (evt) {
+    if (evt.target.classList.contains('active-modal')) {
+      closeModal();
+    }
+  };
+
+  // Нажатие на Esc закрывает окно
+  var onModalEscPress = function (evt) {
+    if (evt.key === 'Escape') {
+      evt.preventDefault();
+      closeModal();
+    }
+  };
+
+  if (document.querySelector('#filter-modal')) {
+    var filterModal = document.querySelector('#filter-modal');
+    var filterOpenButton = document.querySelector('#filter-button');
+    var filterCloseButton = filterModal.querySelector('#filter-close');
+
+    filterOpenButton.addEventListener('click', function (evt) {
+      evt.preventDefault();
+      showModal(filterModal);
+    });
+
+    filterCloseButton.addEventListener('click', function () {
+      closeModal();
     });
   }
 })();

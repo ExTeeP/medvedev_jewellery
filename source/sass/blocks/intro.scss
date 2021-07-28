@@ -1,57 +1,109 @@
-
 .intro {
-  min-height: 463px;
+  padding: 0 15px;
   display: flex;
   position: relative;
   align-items: center;
   justify-content: center;
   text-align: center;
-  background-image: url("../img/intro-desktop.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
   background-color: $color-accent;
+}
 
-  @supports (background: url("../img/intro-desktop.webp")) {
-    background-image: url("../img/intro-desktop.webp");
+.intro--main {
+  min-height: 463px;
+  background-image: url("../img/intro-main-desktop.jpg");
+
+  @supports (background: url("../img/intro-main-desktop.webp")) {
+    background-image: url("../img/intro-main-desktop.webp");
   }
 
   @media (min-resolution: $retina-dppx) {
-    background-image: url("../img/intro-desktop@2x.jpg");
+    background-image: url("../img/intro-main-desktop@2x.jpg");
 
-    @supports (background: url("../img/intro-desktop@2x.webp")) {
-      background-image: url("../img/intro-desktop@2x.webp");
+    @supports (background: url("../img/intro-main-desktop@2x.webp")) {
+      background-image: url("../img/intro-main-desktop@2x.webp");
     }
   }
 
   @media (max-width: $tablet-width) {
-    background-image: url("../img/intro-tablet.jpg");
+    background-image: url("../img/intro-main-tablet.jpg");
 
-    @supports (background: url("../img/intro-tablet.webp")) {
-      background-image: url("../img/intro-tablet.webp");
+    @supports (background: url("../img/intro-main-tablet.webp")) {
+      background-image: url("../img/intro-main-tablet.webp");
     }
 
     @media (min-resolution: $retina-dppx) {
-      background-image: url("../img/intro-tablet@2x.jpg");
+      background-image: url("../img/intro-main-tablet@2x.jpg");
 
-      @supports (background: url("../img/intro-tablet@2x.webp")) {
-        background-image: url("../img/intro-tablet@2x.webp");
+      @supports (background: url("../img/intro-main-tablet@2x.webp")) {
+        background-image: url("../img/intro-main-tablet@2x.webp");
       }
     }
   }
 
   @media (max-width: $mobile-width) {
-    background-image: url("../img/intro-mobile.jpg");
+    background-image: url("../img/intro-main-mobile.jpg");
 
-    @supports (background: url("../img/intro-mobile.webp")) {
-      background-image: url("../img/intro-mobile.webp");
+    @supports (background: url("../img/intro-main-mobile.webp")) {
+      background-image: url("../img/intro-main-mobile.webp");
     }
 
     @media (min-resolution: $retina-dppx) {
-      background-image: url("../img/intro-mobile@2x.jpg");
+      background-image: url("../img/intro-main-mobile@2x.jpg");
 
-      @supports (background: url("../img/intro-mobile@2x.webp")) {
-        background-image: url("../img/intro-mobile@2x.webp");
+      @supports (background: url("../img/intro-main-mobile@2x.webp")) {
+        background-image: url("../img/intro-main-mobile@2x.webp");
+      }
+    }
+  }
+}
+
+.intro--catalog {
+  min-height: 261px;
+  background-image: url("../img/intro-catalog-desktop.jpg");
+
+  @supports (background: url("../img/intro-catalog-desktop.webp")) {
+    background-image: url("../img/intro-catalog-desktop.webp");
+  }
+
+  @media (min-resolution: $retina-dppx) {
+    background-image: url("../img/intro-catalog-desktop@2x.jpg");
+
+    @supports (background: url("../img/intro-catalog-desktop@2x.webp")) {
+      background-image: url("../img/intro-catalog-desktop@2x.webp");
+    }
+  }
+
+  @media (max-width: $tablet-width) {
+    background-image: url("../img/intro-catalog-tablet.jpg");
+
+    @supports (background: url("../img/intro-catalog-tablet.webp")) {
+      background-image: url("../img/intro-catalog-tablet.webp");
+    }
+
+    @media (min-resolution: $retina-dppx) {
+      background-image: url("../img/intro-catalog-tablet@2x.jpg");
+
+      @supports (background: url("../img/intro-catalog-tablet@2x.webp")) {
+        background-image: url("../img/intro-catalog-tablet@2x.webp");
+      }
+    }
+  }
+
+  @media (max-width: $mobile-width) {
+    background-image: url("../img/intro-catalog-mobile.jpg");
+
+    @supports (background: url("../img/intro-catalog-mobile.webp")) {
+      background-image: url("../img/intro-catalog-mobile.webp");
+    }
+
+    @media (min-resolution: $retina-dppx) {
+      background-image: url("../img/intro-catalog-mobile@2x.jpg");
+
+      @supports (background: url("../img/intro-catalog-mobile@2x.webp")) {
+        background-image: url("../img/intro-catalog-mobile@2x.webp");
       }
     }
   }
@@ -72,6 +124,15 @@
   }
 }
 
+.intro--catalog p {
+  font-size: 34px;
+  line-height: 44px;
+  letter-spacing: normal;
+
+  @media (max-width: $mobile-width) {
+  }
+}
+
 .intro span {
   display: block;
   font-style: italic;
@@ -83,5 +144,13 @@
   @media (max-width: $mobile-width) {
     font-size: 34px;
     line-height: 38px;
+  }
+}
+
+.intro--catalog span {
+  font-size: 22px;
+  line-height: 29px;
+
+  @media (max-width: $mobile-width) {
   }
 }

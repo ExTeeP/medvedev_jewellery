@@ -1,0 +1,30 @@
+.catalog-cards__list{
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+}
+
+.catalog-cards__item {
+  margin-right: 30px;
+  margin-bottom: 20px;
+  width: calc(33.333% - 20px);
+
+  &:nth-child(3n) {
+    margin-right: 0;
+  }
+
+  @media (max-width: $mobile-width) {
+    margin-bottom: 10px;
+    width: calc(50% - 15px);
+
+    &:nth-child(3n) {
+      margin-right: 30px;
+    }
+
+    &:nth-child(2n) {
+      margin-right: 0;
+    }
+  }
+}

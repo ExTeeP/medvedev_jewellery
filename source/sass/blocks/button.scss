@@ -1,0 +1,36 @@
+.button {
+  margin: 0;
+  padding: 10px 20px;
+  width: 100%;
+  min-height: 68px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: $main-font;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 21px;
+  color: $color-white;
+  background-color: $color-accent;
+  border: 1px solid $color-accent;
+  cursor: pointer;
+}
+
+.button--second {
+  color: $color-black;
+  background-color: $color-white;
+}
+
+.button:hover {
+  opacity: 0.8;
+  transition: opacity 0.3s ease-out;
+}
+
+.button--second:hover {
+  opacity: 0.8;
+  background-color: $color-accent-light;
+  transition:
+    opacity 0.3s ease-out,
+    background-color 0.3s ease-out;
+}
