@@ -87,6 +87,15 @@
   color: inherit;
 }
 
+.header__user-item a:hover {
+  transition: text-decoration 0.3s ease-out;
+  text-decoration: underline solid $color-accent 1px;
+
+  @media (max-width: $tablet-width) {
+    text-decoration: none;
+  }
+}
+
 .header__cart-counter {
   padding-left: 3px;
 }

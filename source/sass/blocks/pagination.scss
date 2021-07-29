@@ -74,6 +74,11 @@
   @media (max-width: $mobile-width) {
     display: none;
   }
+
+  &:hover {
+    transition: text-decoration 0.3s ease-out;
+    text-decoration: underline solid $color-accent 1px;
+  }
 }
 
 .pagination__prev {

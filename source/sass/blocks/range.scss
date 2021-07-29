@@ -10,10 +10,10 @@
 }
 
 .range__progress {
-  width: 120px;
+  width: 63%;
   height: 1px;
   position: absolute;
-  left: 44px;
+  left: 18%;
   border: none;
   background-color: $color-accent;
 }
@@ -25,19 +25,26 @@
   top: 50%;
   width: 15px;
   height: 15px;
-  cursor: move;
+  cursor: pointer;
   transform: translateY(-50%);
   border: none;
   border-radius: 50%;
   background-color: $color-accent;
+
+  &:hover,
+  &:active {
+    opacity: 0.8;
+    transition:
+      opacity 0.3s ease-out;
+    }
 }
 
 .range__button-1 {
-  left: 44px;
+  left: 18%;
 }
 
 .range__button-2 {
-  left: 149px;
+  left: 79%;
 }
 
 .range__tooltip {

@@ -106,3 +106,12 @@
 .navigation__login a {
   color: inherit;
 }
+
+.navigation__main a:hover {
+  transition: text-decoration 0.3s ease-out;
+  text-decoration: underline solid $color-accent 1px;
+
+  @media (max-width: $tablet-width) {
+    text-decoration: none;
+  }
+}

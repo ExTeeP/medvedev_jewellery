@@ -39,7 +39,12 @@
   line-height: 21px;
 }
 
-.product-card p {
+.product-card:hover h3 {
+  transition: text-decoration 0.3s ease-out;
+  text-decoration: underline solid $color-accent 1px;
+}
+
+.product-card__price {
   margin-top: 0;
   margin-bottom: 15px;
   font-weight: bold;
