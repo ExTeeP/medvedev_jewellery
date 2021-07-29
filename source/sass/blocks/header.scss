@@ -1,10 +1,12 @@
 .header {
   padding-top: 30px;
-  padding-bottom: 20px;
+  padding-bottom: 19px;
   background-color: $color-white;
+  border-bottom: 1px solid $color-decore-line;
 
   @media (max-width: $tablet-width) {
     padding-bottom: 30px;
+    border-bottom: none;
   }
 
   @media (max-width: $mobile-width) {
