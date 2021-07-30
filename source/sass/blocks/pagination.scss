@@ -2,7 +2,6 @@
   padding-top: 37px;
   padding-left: 80px;
   padding-right: 80px;
-  padding-bottom: 75px;
   position: relative;
   font-weight: 500;
   font-size: 16px;
@@ -30,7 +29,6 @@
   @media (max-width: $mobile-width) {
     padding-top: 17px;
     padding-right: 0;
-    padding-bottom: 65px;
     padding-left: 0;
   }
 }
@@ -56,13 +54,17 @@
 .pagination__item a {
   color: $color-grey;
 
+  &:focus,
   &:hover {
-    transition: color 0.3s ease-out;
+    outline: none;
     color: $color-black;
+    transition:
+      color 0.3s ease-out
   }
 }
 
 .pagination__item .pagination__active {
+  cursor: default;
   color: $color-black;
 }
 
@@ -71,14 +73,34 @@
   position: absolute;
   color: $color-black;
 
+  &::after {
+    content: "";
+    width: 0;
+    height: 1px;
+    display: block;
+    position: absolute;
+    bottom: -1;
+    left: 0;
+    background-color: $color-accent;
+    transition: width 0.3s ease-out;
+  }
+
+  &:focus,
+  &:hover {
+    outline: none;
+  }
+
   @media (max-width: $mobile-width) {
     display: none;
   }
+}
 
-  &:hover {
-    transition: text-decoration 0.3s ease-out;
-    text-decoration: underline solid $color-accent 1px;
-  }
+.pagination__prev:focus::after,
+.pagination__prev:hover::after,
+.pagination__next:focus::after,
+.pagination__next:hover::after {
+  width: 100%;
+  transition: width 0.3s ease-out;
 }
 
 .pagination__prev {

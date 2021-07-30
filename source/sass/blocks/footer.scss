@@ -1,4 +1,5 @@
 .footer {
+  margin-top: 75px;
   padding-top: 95px;
   padding-bottom: 80px;
   font-weight: 500;
@@ -10,6 +11,10 @@
   @media (max-width: $tablet-width) {
     padding-top: 55px;
     padding-bottom: 35px;
+  }
+
+  @media (max-width: $mobile-width) {
+    margin-top: 65px;
   }
 }
 
@@ -72,6 +77,10 @@
   color: $color-white;
   background-color: transparent;
   border: none;
+
+  &:focus {
+    outline: none;
+  }
 }
 
 .footer__subscribe-form input::placeholder {
@@ -95,11 +104,21 @@
   background-color: transparent;
   color: $color-white;
   cursor: pointer;
+
+  &:focus {
+    outline: none;
+  }
+}
+
+.footer__subscribe-btn:focus svg {
+  transform: rotate(180deg) scale(1.2);
+  transition: transform 0.3s ease-out;
 }
 
 .footer__subscribe-btn svg {
   margin-left: 8px;
   transform: rotate(180deg);
+  transition: transform 0.3s ease-out;
 }
 
 .footer__links {
@@ -127,9 +146,35 @@
 
 .footer__list a {
   display: flex;
+  display: inline-block;
+  position: relative;
   align-items: center;
   color: inherit;
+
+  &::after {
+    content: "";
+    width: 0;
+    height: 1px;
+    display: block;
+    position: absolute;
+    bottom: -1;
+    left: 0;
+    background-color: $color-white;
+    transition: width 0.3s ease-out;
+  }
+
+  &:focus,
+  &:hover {
+    outline: none;
+  }
 }
+
+.footer__list a:focus::after,
+.footer__list a:hover::after {
+  width: 100%;
+  transition: width 0.3s ease-out;
+}
+
 
 .footer__condition {
   padding-right: 12%;

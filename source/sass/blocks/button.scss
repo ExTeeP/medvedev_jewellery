@@ -14,6 +14,7 @@
   color: $color-white;
   background-color: $color-accent;
   border: 1px solid $color-accent;
+  outline: none;
   cursor: pointer;
 }
 
@@ -22,11 +23,13 @@
   background-color: $color-white;
 }
 
+.button:focus,
 .button:hover {
   opacity: 0.8;
   transition: opacity 0.3s ease-out;
 }
 
+.button--second:focus,
 .button--second:hover {
   opacity: 0.8;
   background-color: $color-accent-light;

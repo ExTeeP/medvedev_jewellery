@@ -1,16 +1,15 @@
 .insta-grid {
   padding-top: 85px;
-  padding-bottom: 130px;
+  padding-bottom: 55px;
   text-align: center;
 
   @media (max-width: $tablet-width) {
     padding-top: 50px;
-    padding-bottom: 80px;
+    padding-bottom: 5px;
   }
 
   @media (max-width: $mobile-width) {
     padding-top: 35px;
-    padding-bottom: 70px;
   }
 }
 
@@ -33,15 +32,6 @@
   @media (max-width: $tablet-width) {
     margin-bottom: 15px;
   }
-}
-
-.insta-grid__follow {
-  margin-bottom: 15px;
-  display: inline-block;
-  font-size: 16px;
-  line-height: 29px;
-  color: $color-black;
-  border-bottom: 1px solid $color-accent;
 }
 
 .insta-grid__list {

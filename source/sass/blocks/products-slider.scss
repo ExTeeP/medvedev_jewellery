@@ -12,6 +12,18 @@
   }
 }
 
+.products-slider--product-page {
+  padding-bottom: 50px;
+
+  @media (max-width: $tablet-width) {
+    padding-bottom: 0;
+  }
+
+  @media (max-width: $mobile-width) {
+    padding-top: 52px;
+  }
+}
+
 .products-slider__inner {
   position: relative;
 }
@@ -30,27 +42,18 @@
   }
 }
 
-.products-slider__link-all {
-  margin-bottom: 15px;
-  display: inline-block;
-  font-size: 16px;
-  line-height: 29px;
-  color: $color-black;
-  border-bottom: 1px solid $color-accent;
-}
-
 .products-slider__wrapper {
   padding-top: 40px;
-  padding-bottom: 15px;
+  padding-bottom: 35px;
 
   @media (max-width: $tablet-width) {
     padding-top: 34px;
-    padding-bottom: 6px; // TODO
+    padding-bottom: 26px;
   }
 
   @media (max-width: $mobile-width) {
     padding-top: 25px;
-    padding-bottom: 1px;
+    padding-bottom: 16px;
   }
 }
 
@@ -63,7 +66,6 @@
 
 .products-slider__item {
   margin-right: 30px;
-  margin-bottom: 30px;
   width: calc(25% - 22.5px);
 
   @media (max-width: $tablet-width) {
@@ -85,10 +87,13 @@
   background-color: transparent;
   cursor: pointer;
 
-  &:hover,
   &:focus {
-    background-size: 16px;
-    transition: background-size 0.2s ease;
+    outline: none;
+  }
+
+  &:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
   }
 
   @media (max-width: $mobile-width) {
@@ -117,11 +122,18 @@
 .products-slider__button-next svg {
   width: 30px;
   height: 11px;
+  transition: transform 0.3s ease-out;
 
   @media (max-width: $tablet-width) {
     width: 36px;
     height: 15px;
   }
+}
+
+.products-slider__button-prev:focus svg,
+.products-slider__button-next:focus svg {
+  transform: scale(1.4);
+  transition: transform 0.3s ease-out;
 }
 
 .products-slider__pagination,
@@ -170,9 +182,9 @@
 }
 
 .products-slider__bullet {
-  display: inline-block;
   margin: 0 5px;
   padding: 0;
+  display: inline-block;
   font: inherit;
   color: inherit;
   border: none;
@@ -185,12 +197,15 @@
   }
 }
 
+.products-slider__bullet:focus,
 .products-slider__bullet:hover {
-  transition: color 0.2s ease-out;
+  outline: none;
   color: $color-black;
+  transition:
+    color 0.3s ease-out;
 }
 
 .products-slider__bullet-active {
-  transition: color 0.2s ease-out;
+  transition: color 0.3s ease-out;
   color: $color-black;
 }

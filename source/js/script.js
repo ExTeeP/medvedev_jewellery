@@ -139,6 +139,60 @@ document.documentElement.classList.remove('nojs');
       },
     });
 
+    var galleryThumbs = new Swiper('.card-gallery__thumbs', {
+      enabled: false,
+
+      breakpoints: {
+        768: {
+          enabled: true,
+          spaceBetween: 14,
+          slidesPerView: 3,
+          freeMode: true,
+          watchSlidesVisibility: true,
+          watchSlidesProgress: true,
+        },
+
+        1024: {
+          spaceBetween: 30,
+          slidesPerView: 3,
+          direction: 'vertical',
+        },
+      },
+    });
+
+    var galleryBig = new Swiper('.card-gallery__big', {
+      slidesPerView: 1,
+      slidesPerGroup: 1,
+      spaceBetween: 0,
+      loop: true,
+
+      pagination: {
+        el: '.card-gallery__counter',
+        type: 'fraction',
+        clickable: false,
+        currentClass: 'card-gallery__counter-current',
+        totalClass: 'card-gallery__counter-total',
+
+        renderFraction: function (currentClass, totalClass) {
+          return (
+            '<span class="' + currentClass + '"></span>' +
+              'of' +
+            '<span class="' + totalClass + '"></span>'
+          );
+        },
+      },
+
+      breakpoints: {
+        768: {
+          pagination: false,
+        },
+      },
+
+      thumbs: {
+        swiper: galleryThumbs
+      }
+    });
+
     var setCounterSlides = function () {
       var bullets = Array.from(document.querySelectorAll('.products-slider__bullet'));
       var currentCounter = document.querySelector('.products-slider__counter-current');

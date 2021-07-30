@@ -28,14 +28,18 @@
   cursor: pointer;
   transform: translateY(-50%);
   border: none;
+  outline: transparent solid 2px;
   border-radius: 50%;
   background-color: $color-accent;
+  outline-offset: -3px;
+  transition: outline 0.3s ease-out;
 
+  &:focus,
   &:hover,
   &:active {
-    opacity: 0.8;
-    transition:
-      opacity 0.3s ease-out;
+    outline-color: $color-accent;
+    outline-offset: -1px;
+    transition: outline 0.3s ease-out;
     }
 }
 

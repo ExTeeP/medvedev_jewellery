@@ -18,8 +18,7 @@
   border-radius: 21px;
 
   &:focus {
-    outline: $color-accent 1px solid;
-    outline-offset: 4px;
+    outline: none;
   }
 
   @media (max-width: $tablet-width) {
@@ -56,8 +55,17 @@
   }
 }
 
+.search__button svg {
+  transition: transform 0.3s ease;
+}
+
+.search__input:focus ~ .search__button svg {
+  transform: scale(1.3);
+  transition: transform 0.3s ease;
+}
+
 .search__button:focus svg {
-  transform: scale(1.2);
+  transform: scale(1.3);
   transition: transform 0.3s ease;
 }
 

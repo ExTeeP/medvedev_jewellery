@@ -104,14 +104,29 @@
 .navigation__main a,
 .navigation__about a,
 .navigation__login a {
+  position: relative;
+  display: inline-block;
   color: inherit;
 }
 
-.navigation__main a:hover {
-  transition: text-decoration 0.3s ease-out;
-  text-decoration: underline solid $color-accent 1px;
+.navigation__main a:focus {
+  outline: none;
+}
 
-  @media (max-width: $tablet-width) {
-    text-decoration: none;
-  }
+.navigation__main a::after {
+  content: "";
+  width: 0;
+  height: 1px;
+  display: block;
+  position: absolute;
+  bottom: -1;
+  left: 0;
+  background-color: $color-accent;
+  transition: width 0.3s ease-out;
+}
+
+.navigation__main a:focus::after,
+.navigation__main a:hover::after {
+  width: 100%;
+  transition: width 0.3s ease-out;
 }

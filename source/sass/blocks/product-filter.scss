@@ -90,6 +90,23 @@
   border-radius: 50%;
 }
 
+.product-filter__label-text {
+  display: inline-block;
+  position: relative;
+}
+
+.product-filter__label-text::after {
+  content: "";
+  width: 0;
+  height: 1px;
+  display: block;
+  position: absolute;
+  bottom: -1;
+  left: 0;
+  background-color: $color-accent;
+  transition: width 0.3s ease-out;
+}
+
 .product-filter__label input[type=checkbox]:checked ~ .product-filter__checkmark,
 .product-filter__label input[type=radio]:checked ~ .product-filter__radiomark {
   background-color: $color-accent;
@@ -106,25 +123,29 @@
   opacity: 0.6;
 }
 
-.product-filter__label input[type=checkbox]:focus ~ .product-filter__label-text,
-.product-filter__label input[type=radio]:focus ~ .product-filter__label-text {
-  text-decoration: underline solid $color-accent 1px;
-  transition:
-    text-decoration 0.3s ease-out;
+.product-filter__label input[type=checkbox]:focus ~ .product-filter__label-text::after,
+.product-filter__label input[type=radio]:focus ~ .product-filter__label-text::after {
+  width: 100%;
+  transition: width 0.3s ease-out;
 }
 
-.product-filter__label:hover,
-.product-filter__label:hover {
-  transition: text-decoration 0.3s ease-out;
-  text-decoration: underline solid $color-accent 1px;
+.product-filter__label input[type=checkbox]:focus ~ .product-filter__checkmark,
+.product-filter__label input[type=radio]:focus ~ .product-filter__checkmark {
+  background-color: $color-accent-light;
+  transition:
+    background-color 0.3s ease-out;
+}
+
+.product-filter__label:hover .product-filter__label-text::after,
+.product-filter__label:hover .product-filter__label-text::after {
+  width: 100%;
+  transition: width 0.3s ease-out;
 }
 
 .product-filter__label:hover .product-filter__checkmark,
 .product-filter__label:hover .product-filter__radiomark {
-  opacity: 0.8;
   background-color: $color-accent-light;
   transition:
-    opacity 0.3s ease-out,
     background-color 0.3s ease-out;
 }
 
