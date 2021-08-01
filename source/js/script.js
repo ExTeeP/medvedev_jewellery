@@ -44,23 +44,32 @@ document.documentElement.classList.remove('nojs');
       }
     };
 
-    var showerMenu = function () {
+    var goUp = function () {
+      var top = Math.max(document.body.scrollTop, document.documentElement.scrollTop);
+
+      if (top > 0) {
+        window.scrollBy(0, -100);
+      }
+    };
+
+    var toggleShowMenu = function () {
       document.documentElement.classList.toggle('page--100vh');
       header.classList.toggle('header--menu-open');
       toggle.classList.toggle('burger__active');
       menu.classList.toggle('navigation--menu-open');
 
+      goUp();
       changeButtonLabel();
     };
 
     var onMenuLinkClick = function (evt) {
       if (evt.target.tagName === 'A') {
-        showerMenu();
+        toggleShowMenu();
       }
     };
 
     var onMenuButtonClick = function () {
-      showerMenu();
+      toggleShowMenu();
     };
 
     var menuToggleHandlers = function () {
@@ -180,12 +189,6 @@ document.documentElement.classList.remove('nojs');
             'of' +
             '<span class="' + totalClass + '"></span>'
           );
-        },
-      },
-
-      breakpoints: {
-        768: {
-          pagination: false,
         },
       },
 
