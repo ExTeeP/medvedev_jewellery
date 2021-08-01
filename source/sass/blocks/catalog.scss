@@ -1,5 +1,6 @@
 .catalog {
   padding-top: 80px;
+  overflow: hidden;
 
   @media (max-width: $tablet-width) {
     padding-top: 50px;
@@ -51,4 +52,8 @@
   @media (max-width: $tablet-width) {
     grid-column: 1/2;
   }
+}
+
+.nojs .catalog__filter-button {
+  display: none;
 }

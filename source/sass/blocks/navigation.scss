@@ -113,7 +113,7 @@
   outline: none;
 }
 
-.navigation__main a::after {
+.navigation__main a[href]::after {
   content: "";
   width: 0;
   height: 1px;
@@ -125,8 +125,8 @@
   transition: width 0.3s ease-out;
 }
 
-.navigation__main a:focus::after,
-.navigation__main a:hover::after {
+.navigation__main a[href]:focus::after,
+.navigation__main a[href]:hover::after {
   width: 100%;
   transition: width 0.3s ease-out;
 }

@@ -6,10 +6,15 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <meta name="description" content="
-                                                  TODO
-  ">
+  <meta name="description" content="Online jewellery store">
   <title>CH Jewellery</title>
+  <link rel="preload" href="./fonts/Poppins-Bold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" href="./fonts/Poppins-Medium.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" href="./fonts/Poppins-Regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" href="./fonts/CormorantGaramond-Bold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" href="./fonts/CormorantGaramond-Italic.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" href="./fonts/CormorantGaramond-SemiBold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" href="./fonts/CormorantGaramond-SemiBold.woff2" as="image" type="font/woff2" crossorigin="anonymous">
   <link rel="stylesheet" href="./css/style.min.css">
 </head>
 
@@ -26,7 +31,7 @@
 
         <ul class="header__user-links">
           <li class="header__user-item">
-            <a href="./login.html">Login</a>
+            <a href="./login.html" id="login-button">Login</a>
           </li>
           <li class="header__user-item">
             <a href="#">Cart <span class="header__cart-counter">0</span></a>
@@ -330,14 +335,15 @@
             <article class="blog__article">
               <div class="blog__header">
                 <h3>How to care for your jewellery</h3>
-                <time>September 30, 2019</time>
+                <time datetime="2019-09-30">September 30, 2019</time>
                 <a href="#">Read Article</a>
               </div>
               <div class="blog__picture">
                 <picture>
                   <source type="image/webP" srcset="./img/blog-care-desktop.webp 1x, ./img/blog-care-desktop@2x.webp 2x">
 
-                  <img src="./img/blog-care-desktop.jpg" srcset="./img/blog-care-desktop@2x.jpg" alt="">
+                    <!-- 1x: 285 2x: 570 -->
+                  <img width="285" height="300" src="./img/blog-care-desktop.jpg" srcset="./img/blog-care-desktop@2x.jpg" alt="How to care for your jewellery">
                 </picture>
               </div>
             </article>
@@ -346,14 +352,15 @@
             <article class="blog__article">
               <div class="blog__header">
                 <h3>Power of crystals</h3>
-                <time>September 23, 2019</time>
+                <time datetime="2019-09-23">September 23, 2019</time>
                 <a href="#">Read Article</a>
               </div>
               <div class="blog__picture">
                 <picture>
                   <source type="image/webP" srcset="./img/blog-power-desktop.webp 1x, ./img/blog-power-desktop@2x.webp 2x">
 
-                  <img src="./img/blog-power-desktop.jpg" srcset="./img/blog-power-desktop@2x.jpg" alt="">
+                    <!-- 1x: 285 2x: 570 -->
+                  <img width="285" height="300" src="./img/blog-power-desktop.jpg" srcset="./img/blog-power-desktop@2x.jpg" alt="Power of crystals">
                 </picture>
               </div>
             </article>
@@ -362,14 +369,15 @@
             <article class="blog__article">
               <div class="blog__header">
                 <h3>AW 19 trends</h3>
-                <time>September 16, 2019</time>
+                <time datetime="2019-09-16">September 16, 2019</time>
                 <a href="#">Read Article</a>
               </div>
               <div class="blog__picture">
                 <picture>
                   <source type="image/webP" srcset="./img/blog-trends-desktop.webp 1x, ./img/blog-trends-desktop@2x.webp 2x">
 
-                  <img src="./img/blog-trends-desktop.jpg" srcset="./img/blog-trends-desktop@2x.jpg" alt="">
+                    <!-- 1x: 570 2x: 1140 -->
+                  <img width="570" height="630" src="./img/blog-trends-desktop.jpg" srcset="./img/blog-trends-desktop@2x.jpg" alt="AW 19 trends">
                 </picture>
               </div>
             </article>
@@ -451,58 +459,58 @@
         <ul class="insta-grid__list">
           <li class="insta-grid__item">
             <picture>
-              <source type="image/webP" srcset="./img/inst-3-desktop.jpg 1x ./img/inst-3-desktop@2x.jpg 2x">
+              <source type="image/webP" srcset="./img/inst-3-desktop.webp 1x, ./img/inst-3-desktop@2x.webp 2x">
 
               <!-- 1x: 230 2x: 460 -->
-              <img width="230" height="230" src="./img/inst-3-desktop.jpg" srcset="./img/inst-3-desktop@2x.jpg 2x" alt="">
+              <img width="230" height="230" src="./img/inst-3-desktop.jpg" srcset="./img/inst-3-desktop@2x.jpg 2x" alt="instagram picture">
             </picture>
           </li>
           <li class="insta-grid__item insta-grid__item--big">
             <picture>
-              <source type="image/webP" srcset="./img/inst-2-desktop.jpg 1x ./img/inst-2-desktop@2x.jpg 2x">
+              <source type="image/webP" srcset="./img/inst-2-desktop.webp 1x, ./img/inst-2-desktop@2x.webp 2x">
 
               <!-- 1x: 399 2x: 798 -->
-              <img width="399" height="414" src="./img/inst-2-desktop.jpg" srcset="./img/inst-2-desktop@2x.jpg 2x" alt="">
+              <img width="399" height="414" src="./img/inst-2-desktop.jpg" srcset="./img/inst-2-desktop@2x.jpg 2x" alt="instagram picture">
             </picture>
           </li>
           <li class="insta-grid__item insta-grid__item--mobile-hidden">
             <picture>
-              <source type="image/webP" srcset="./img/inst-4-desktop.jpg 1x ./img/inst-4-desktop@2x.jpg 2x">
+              <source type="image/webP" srcset="./img/inst-4-desktop.webp 1x, ./img/inst-4-desktop@2x.webp 2x">
 
               <!-- 1x: 230 2x: 460 -->
-              <img width="230" height="230" src="./img/inst-4-desktop.jpg" srcset="./img/inst-4-desktop@2x.jpg 2x" alt="">
+              <img width="230" height="230" src="./img/inst-4-desktop.jpg" srcset="./img/inst-4-desktop@2x.jpg 2x" alt="instagram picture">
             </picture>
           </li>
           <li class="insta-grid__item insta-grid__item--mobile-hidden">
             <picture>
-              <source type="image/webP" srcset="./img/inst-6-desktop.jpg 1x ./img/inst-6-desktop@2x.jpg 2x">
+              <source type="image/webP" srcset="./img/inst-6-desktop.webp 1x, ./img/inst-6-desktop@2x.webp 2x">
 
               <!-- 1x: 230 2x: 460 -->
-              <img width="230" height="230" src="./img/inst-6-desktop.jpg" srcset="./img/inst-6-desktop@2x.jpg 2x" alt="">
+              <img width="230" height="230" src="./img/inst-6-desktop.jpg" srcset="./img/inst-6-desktop@2x.jpg 2x" alt="instagram picture">
             </picture>
           </li>
           <li class="insta-grid__item">
             <picture>
-              <source type="image/webP" srcset="./img/inst-1-desktop.jpg 1x ./img/inst-1-desktop@2x.jpg 2x">
+              <source type="image/webP" srcset="./img/inst-1-desktop.webp 1x, ./img/inst-1-desktop@2x.webp 2x">
 
               <!-- 1x: 230 2x: 460 -->
-              <img width="230" height="150" src="./img/inst-1-desktop.jpg" srcset="./img/inst-1-desktop@2x.jpg 2x" alt="">
+              <img width="230" height="150" src="./img/inst-1-desktop.jpg" srcset="./img/inst-1-desktop@2x.jpg 2x" alt="instagram picture">
             </picture>
           </li>
           <li class="insta-grid__item">
             <picture>
-              <source type="image/webP" srcset="./img/inst-5-desktop.jpg 1x ./img/inst-5-desktop@2x.jpg 2x">
+              <source type="image/webP" srcset="./img/inst-5-desktop.webp 1x, ./img/inst-5-desktop@2x.webp 2x">
 
               <!-- 1x: 230 2x: 460 -->
-              <img width="230" height="150" src="./img/inst-5-desktop.jpg" srcset="./img/inst-5-desktop@2x.jpg 2x" alt="">
+              <img width="230" height="150" src="./img/inst-5-desktop.jpg" srcset="./img/inst-5-desktop@2x.jpg 2x" alt="instagram picture">
             </picture>
           </li>
           <li class="insta-grid__item">
             <picture>
-              <source type="image/webP" srcset="./img/inst-7-desktop.jpg 1x ./img/inst-7-desktop@2x.jpg 2x">
+              <source type="image/webP" srcset="./img/inst-7-desktop.webp 1x, ./img/inst-7-desktop@2x.webp 2x">
 
               <!-- 1x: 230 2x: 460 -->
-              <img width="230" height="150" src="./img/inst-7-desktop.jpg" srcset="./img/inst-7-desktop@2x.jpg 2x" alt="">
+              <img width="230" height="150" src="./img/inst-7-desktop.jpg" srcset="./img/inst-7-desktop@2x.jpg 2x" alt="instagram picture">
             </picture>
           </li>
         </ul>
@@ -519,7 +527,7 @@
 
         <div class="footer__subscribe-form">
           <form action="https://echo.htmlacademy.ru" method="POST">
-            <input type="email" placeholder="Your E-mail" name="footer-subscrible">
+            <input type="email" placeholder="Your E-mail" name="footer-subscrible-email" pattern="^[\w]{1,}[\w.+-]{0,}@[\w-]{2,}([.][a-zA-Z]{2,}|[.][\w-]{2,}[.][a-zA-Z]{2,})$" maxlength="254" inputmode="email" required="">
             <button class="footer__subscribe-btn" type="submit">
               Sign Up
 
@@ -599,6 +607,41 @@
       </section>
     </div>
   </footer>
+
+  <section class="login modal" id="login-modal">
+    <div class="login__inner login__inner--modal container">
+      <h2>Log In</h2>
+      <div class="login__form">
+        <form action="https://echo.htmlacademy.ru" method="POST">
+          <label>
+            <input type="email" name="login-email" id="login-field" maxlength="254" inputmode="email" placeholder="Your E-mail" required="" pattern="^[\w]{1,}[\w.+-]{0,}@[\w-]{2,}([.][a-zA-Z]{2,}|[.][\w-]{2,}[.][a-zA-Z]{2,})$">
+            <span class="visually-hidden">Type your e-mail</span>
+          </label>
+          <label>
+            <input type="password" name="login-password" id="password-field" maxlength="254" inputmode="text" placeholder="Password" required="">
+            <span class="visually-hidden">Password</span>
+          </label>
+          <div class="login__forgot">
+            <a href="#">Forgot your password?</a>
+          </div>
+          <div class="login__buttons">
+            <button class="login__button button" type="submit">Log In</button>
+          </div>
+        </form>
+      </div>
+      <div class="login__signup">
+        <span>Don’t have an account?</span>
+        <a href="#">Sign Up</a>
+      </div>
+      <div class="modal__close">
+        <button class="modal__close-button" type="button" aria-label="close modal">
+          <svg width="14" height="14" fill="none" aria-hidden="true">
+            <use xlink:href="./img/icon/sprite_auto.svg#icon-close"></use>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </section>
 
   <script src="./js/vendors.js"></script>
   <script src="./js/script.js"></script>

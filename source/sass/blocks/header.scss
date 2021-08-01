@@ -103,12 +103,12 @@
   }
 }
 
-.header__user-item a:focus {
+.header__user-item a[href]:focus {
   outline: none;
 }
 
-.header__user-item a:focus::after,
-.header__user-item a:hover::after {
+.header__user-item a[href]:focus::after,
+.header__user-item a[href]:hover::after {
   outline: none;
   width: 100%;
   transition: width 0.3s ease-out;
@@ -221,7 +221,7 @@
     opacity: 0;
     visibility: hidden;
     transform: translateX(100%);
-    z-index: 10;
+    z-index: 100;
     background-color: transparent;
   }
 

@@ -51,7 +51,12 @@
     margin-left: 11px;
   }
 }
+
 .pagination__item a {
+  color: $color-black;
+}
+
+.pagination__item a[href] {
   color: $color-grey;
 
   &:focus,
@@ -61,11 +66,6 @@
     transition:
       color 0.3s ease-out
   }
-}
-
-.pagination__item .pagination__active {
-  cursor: default;
-  color: $color-black;
 }
 
 .pagination__prev,

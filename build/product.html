@@ -6,10 +6,14 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <meta name="description" content="
-                                                  TODO
-  ">
-  <title>CH Jewellery</title>
+  <meta name="description" content="Online jewellery store. Gold Necklace">
+  <title>Gold Necklace - CH Jewellery</title>
+  <link rel="preload" href="./fonts/Poppins-Bold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" href="./fonts/Poppins-Medium.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" href="./fonts/Poppins-Regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" href="./fonts/CormorantGaramond-Bold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" href="./fonts/CormorantGaramond-Italic.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" href="./fonts/CormorantGaramond-SemiBold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
   <link rel="stylesheet" href="./css/style.min.css">
 </head>
 
@@ -26,7 +30,7 @@
 
         <ul class="header__user-links">
           <li class="header__user-item">
-            <a href="./login.html">Login</a>
+            <a href="./login.html" id="login-button">Login</a>
           </li>
           <li class="header__user-item">
             <a href="#">Cart <span class="header__cart-counter">0</span></a>
@@ -142,7 +146,7 @@
               </tr>
             </table>
           </div>
-          <button class="product-card__buy button" type="button">Add to cart</button>
+          <button class="product-card__buy button" type="button" id="add-item-button">Add to cart</button>
           <ul class="product-card__features">
             <li>14 Day Returns</li>
             <li>2-Year Warranty</li>
@@ -154,25 +158,34 @@
           <div class="card-gallery__big">
             <ul class="card-gallery__big-list swiper-wrapper">
               <li class="swiper-slide">
-                <picture>
-                  <source type="image/webP" srcset="./img/necklace-detail.webp 1x ./img/necklace-detail@2x.webp 2x">
+                <div class="card-gallery__picture">
+                  <picture>
+                    <source type="image/webP" srcset="./img/necklace-detail.webp 1x, ./img/necklace-detail@2x.webp 2x">
 
-                  <img src="./img/necklace-detail.jpg" srcset="./img/necklace-detail@2x.jpg 2x" alt="">
-                </picture>
+                    <!-- 1x: 470 2x: 940 -->
+                    <img width="470" height="435" src="./img/necklace-detail.jpg" srcset="./img/necklace-detail@2x.jpg 2x" alt="necklace detail">
+                  </picture>
+                </div>
               </li>
               <li class="swiper-slide">
-                <picture>
-                  <source type="image/webP" srcset="./img/gold-necklace-for-women.webp 1x ./img/gold-necklace-for-women@2x.webp 2x">
+                <div class="card-gallery__picture">
+                  <picture>
+                    <source type="image/webP" srcset="./img/gold-necklace-for-women.webp 1x, ./img/gold-necklace-for-women@2x.webp 2x">
 
-                  <img src="./img/gold-necklace-for-women.jpg" srcset="./img/gold-necklace-for-women@2x.jpg 2x" alt="">
-                </picture>
+                    <!-- 1x: 470 2x: 940 -->
+                    <img width="470" height="435" src="./img/gold-necklace-for-women.jpg" srcset="./img/gold-necklace-for-women@2x.jpg 2x" alt="gold necklace for women">
+                  </picture>
+                </div>
               </li>
               <li class="swiper-slide">
-                <picture>
-                  <source type="image/webP" srcset="./img/womens-necklace-set.webp 1x ./img/womens-necklace-set@2x.webp 2x">
+                <div class="card-gallery__picture">
+                  <picture>
+                    <source type="image/webP" srcset="./img/womens-necklace-set.webp 1x, ./img/womens-necklace-set@2x.webp 2x">
 
-                  <img src="./img/womens-necklace-set.jpg" srcset="./img/womens-necklace-set.jpg 2x" alt="">
-                </picture>
+                    <!-- 1x: 470 2x: 940 -->
+                    <img width="470" height="435" src="./img/womens-necklace-set.jpg" srcset="./img/womens-necklace-set.jpg 2x" alt="womens necklace set">
+                  </picture>
+                </div>
               </li>
             </ul>
           </div>
@@ -180,29 +193,38 @@
             <ul class="card-gallery__thumbs-list swiper-wrapper">
               <li class="swiper-slide">
                 <a href="#">
-                  <picture>
-                    <source type="image/webP" srcset="./img/pretty-gold-necklace.webp 1x ./img/pretty-gold-necklace@2x.webp 2x">
+                  <div class="card-gallery__picture">
+                    <picture>
+                      <source type="image/webP" srcset="./img/pretty-gold-necklace.webp 1x, ./img/pretty-gold-necklace@2x.webp 2x">
 
-                    <img src="./img/pretty-gold-necklace.jpg" srcset="./img/pretty-gold-necklace.jpg 2x" alt="">
-                  </picture>
+                    <!-- 1x: 100 2x: 200 -->
+                      <img width="100" height="125" src="./img/pretty-gold-necklace.jpg" srcset="./img/pretty-gold-necklace.jpg 2x" alt="pretty gold necklace">
+                    </picture>
+                  </div>
                 </a>
               </li>
               <li class="swiper-slide">
                 <a href="#">
-                  <picture>
-                    <source type="image/webP" srcset="./img/gold-necklace-for-women.webp 1x ./img/gold-necklace-for-women@2x.webp 2x">
+                  <div class="card-gallery__picture">
+                    <picture>
+                      <source type="image/webP" srcset="./img/gold-necklace-for-women.webp 1x, ./img/gold-necklace-for-women@2x.webp 2x">
 
-                    <img src="./img/gold-necklace-for-women.jpg" srcset="./img/gold-necklace-for-women@2x.jpg 2x" alt="">
-                  </picture>
+                    <!-- 1x: 100 2x: 200 -->
+                      <img width="100" height="125" src="./img/gold-necklace-for-women.jpg" srcset="./img/gold-necklace-for-women@2x.jpg 2x" alt="gold necklace for women">
+                    </picture>
+                  </div>
                 </a>
               </li>
               <li class="swiper-slide">
                 <a href="#">
-                  <picture>
-                    <source type="image/webP" srcset="./img/womens-necklace-set.webp 1x ./img/womens-necklace-set@2x.webp 2x">
+                  <div class="card-gallery__picture">
+                    <picture>
+                      <source type="image/webP" srcset="./img/womens-necklace-set.webp 1x, ./img/womens-necklace-set@2x.webp 2x">
 
-                    <img src="./img/womens-necklace-set.jpg" srcset="./img/womens-necklace-set.jpg 2x" alt="">
-                  </picture>
+                    <!-- 1x: 100 2x: 200 -->
+                      <img width="100" height="125" src="./img/womens-necklace-set.jpg" srcset="./img/womens-necklace-set.jpg 2x" alt="womens necklace set">
+                    </picture>
+                  </div>
                 </a>
               </li>
             </ul>
@@ -409,7 +431,6 @@
         </div>
       </div>
     </section>
-
   </main>
 
   <footer class="page__footer footer">
@@ -420,10 +441,9 @@
 
         <div class="footer__subscribe-form">
           <form action="https://echo.htmlacademy.ru" method="POST">
-            <input type="email" placeholder="Your E-mail" name="footer-subscrible">
+            <input type="email" placeholder="Your E-mail" name="footer-subscrible-email" pattern="^[\w]{1,}[\w.+-]{0,}@[\w-]{2,}([.][a-zA-Z]{2,}|[.][\w-]{2,}[.][a-zA-Z]{2,})$" maxlength="254" inputmode="email" required="">
             <button class="footer__subscribe-btn" type="submit">
               Sign Up
-
               <svg width="30" height="11" fill="none" aria-hidden="true">
                 <use xlink:href="./img/icon/sprite_auto.svg#icon-arrow-left"></use>
               </svg>
@@ -500,6 +520,97 @@
       </section>
     </div>
   </footer>
+
+  <section class="modal" id="add-item-modal">
+    <div class="contaier modal__inner">
+      <div class="modal__header">
+        <h2>The item was added to&nbsp;your cart</h2>
+      </div>
+      <div class="modal__content">
+        <ul class="cart-products">
+          <li class="cart-products__item">
+            <div class="cart-products__picture">
+              <picture>
+                <source type="image/webP" srcset="./img/necklace-detail.webp 1x, ./img/necklace-detail@2x.webp 2x">
+
+                <!-- 1x: 84 2x 168 -->
+                <img width="84" height="79" src="./img/necklace-detail.jpg" srcset="./img/necklace-detail@2x.jpg 2x" alt="necklace detail">
+              </picture>
+            </div>
+            <div class="cart-products__info">
+              <h3>Gold Necklace</h3>
+              <p>$ 115</p>
+            </div>
+            <div class="cart-products__counter">
+              <button class="cart-products__plus">
+                <svg width="14" height="14" fill="none" aria-hidden="true">
+                  <use xlink:href="./img/icon/sprite_auto.svg#icon-plus"></use>
+                </svg>
+              </button>
+              <p class="cart-products__number">1</p>
+              <button class="cart-products__minus">
+                <svg width="14" height="14" fill="none" aria-hidden="true">
+                  <use xlink:href="./img/icon/sprite_auto.svg#icon-minus"></use>
+                </svg>
+              </button>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <div class="modal__footer">
+        <div class="modal__cart-counter">
+          <p class="modal__cart-current">You have 1 item in the cart</p>
+          <p class="modal__cart-total">Cart subtotal: $ 115</p>
+        </div>
+        <div class="modal__buttons">
+          <a class="modal__button button button--second" href="./catalog.html">Continue shopping</a>
+          <a class="modal__button button" href="#">Checkout</a>
+        </div>
+      </div>
+      <div class="modal__close">
+        <button class="modal__close-button" type="button" aria-label="close modal">
+          <svg width="14" height="14" fill="none" aria-hidden="true">
+            <use xlink:href="./img/icon/sprite_auto.svg#icon-close"></use>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <section class="login modal" id="login-modal">
+    <div class="login__inner login__inner--modal container">
+      <h2>Log In</h2>
+      <div class="login__form">
+        <form action="https://echo.htmlacademy.ru" method="POST">
+          <label>
+            <input type="email" name="login-email" id="login-field" maxlength="254" inputmode="email" placeholder="Your E-mail" required="" pattern="^[\w]{1,}[\w.+-]{0,}@[\w-]{2,}([.][a-zA-Z]{2,}|[.][\w-]{2,}[.][a-zA-Z]{2,})$">
+            <span class="visually-hidden">Type your e-mail</span>
+          </label>
+          <label>
+            <input type="password" name="login-password" id="password-field" maxlength="254" inputmode="text" placeholder="Password" required="">
+            <span class="visually-hidden">Password</span>
+          </label>
+          <div class="login__forgot">
+            <a href="#">Forgot your password?</a>
+          </div>
+          <div class="login__buttons">
+            <button class="login__button button" type="submit">Log In</button>
+          </div>
+        </form>
+      </div>
+      <div class="login__signup">
+        <span>Don’t have an account?</span>
+        <a href="#">Sign Up</a>
+      </div>
+      <div class="modal__close">
+        <button class="modal__close-button" type="button" aria-label="close modal">
+          <svg width="14" height="14" fill="none" aria-hidden="true">
+            <use xlink:href="./img/icon/sprite_auto.svg#icon-close"></use>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </section>
 
   <script src="./js/vendors.js"></script>
   <script src="./js/script.js"></script>

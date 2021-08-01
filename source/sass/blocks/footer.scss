@@ -18,6 +18,10 @@
   }
 }
 
+.footer--mt0 {
+  margin-top: 0;
+}
+
 .footer__inner {
   display: flex;
 
@@ -77,6 +81,7 @@
   color: $color-white;
   background-color: transparent;
   border: none;
+  border-radius: 0;
 
   &:focus {
     outline: none;
