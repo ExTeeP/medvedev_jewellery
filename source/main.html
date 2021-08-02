@@ -29,40 +29,39 @@
           </svg>
         </a>
 
-        <ul class="header__user-links">
-          <li class="header__user-item">
-            <a href="./login.html" id="login-button">Login</a>
-          </li>
-          <li class="header__user-item">
-            <a href="#">Cart <span class="header__cart-counter">0</span></a>
-          </li>
-        </ul>
+        <div class="header__top-left">
+          <div class="header__search search">
+            <form action="https://echo.htmlacademy.ru" method="GET">
+              <input class="search__input" type="search" placeholder="Type here to search">
+              <button class="search__button search__button--l0" type="submit" aria-label="search">
+                <svg width="14" height="14" fill="none" aria-hidden="true">
+                  <use xlink:href="./img/icon/sprite_auto.svg#icon-search"></use>
+                </svg>
+              </button>
+            </form>
+          </div>
 
-        <div class="header__search search">
-          <form action="https://echo.htmlacademy.ru" method="GET">
-            <input class="search__input" type="search" placeholder="Type here to search">
-            <button class="search__button search__button--l0" type="submit" aria-label="search">
-              <svg width="14" height="14" fill="none" aria-hidden="true">
-                <use xlink:href="./img/icon/sprite_auto.svg#icon-search"></use>
-              </svg>
-            </button>
-          </form>
-        </div>
-
-        <!-- burger__active класс активной кнопки (закрытие) -->
-        <div class="header__top-mobile-left">
-          <button class="burger" type="button">
+          <!-- burger__active класс активной кнопки (закрытие) -->
+          <button class="header__burger burger" type="button">
             <span class="visually-hidden">Open menu</span>
             <span class="burger__line"></span>
           </button>
         </div>
 
-        <div class="header__top-mobile-right">
-          <a href="#">
-            <svg width="20" height="18" fill="none" stroke="currentColor" aria-hidden="true">
-              <use xlink:href="./img/icon/sprite_auto.svg#icon-cart"></use>
-            </svg>
-          </a>
+        <div class="header__top-right">
+          <ul class="header__user-links">
+            <li class="header__user-item header__login">
+              <a href="./login.html" id="login-button">Login</a>
+            </li>
+            <li class="header__user-item header__cart">
+              <a href="#">
+                <span class="header__cart-text">Cart <span class="header__cart-counter">0</span></span>
+                <svg width="20" height="18" fill="none" stroke="currentColor" aria-hidden="true">
+                  <use xlink:href="./img/icon/sprite_auto.svg#icon-cart"></use>
+                </svg>
+              </a>
+            </li>
+          </ul>
         </div>
       </div>
 

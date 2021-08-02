@@ -179,12 +179,14 @@
 .products-slider__counter-total {
   margin: 0 5px;
   display: inline-block;
+  vertical-align: top;
 }
 
 .products-slider__bullet {
   margin: 0 5px;
   padding: 0;
   display: inline-block;
+  vertical-align: top;
   font: inherit;
   color: inherit;
   border: none;

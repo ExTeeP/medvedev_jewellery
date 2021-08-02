@@ -1,6 +1,3 @@
-.search {
-}
-
 .search form {
   position: relative;
 }
@@ -76,9 +73,6 @@
 .nojs .search__button,
 .nojs .search__input {
   color: $color-black;
-}
-
-.nojs .search__input {
 }
 
 .nojs .search__input::placeholder {
