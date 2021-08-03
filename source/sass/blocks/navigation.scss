@@ -55,7 +55,7 @@
   display: none;
 
   @media (max-width: $tablet-width) {
-    padding-bottom: 25px;
+    padding-bottom: 20px;
     display: block;
     font-weight: 500;
     font-size: 18px;
@@ -63,7 +63,7 @@
   }
 
   @media (max-width: $mobile-width) {
-    padding-bottom: 15px;
+    padding-bottom: 10px;
   }
 }
 
@@ -88,7 +88,7 @@
 
   @media (max-width: $tablet-width) {
     margin: 0;
-    margin-bottom: 21px;
+    margin-bottom: 19px;
 
     &:first-child {
       margin-left: 0;

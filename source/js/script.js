@@ -158,6 +158,7 @@ document.documentElement.classList.remove('nojs');
           spaceBetween: 14,
           slidesPerView: 3,
           freeMode: true,
+          direction: 'horizontal',
           watchSlidesVisibility: true,
           watchSlidesProgress: true,
         },

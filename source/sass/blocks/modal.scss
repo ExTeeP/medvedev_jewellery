@@ -68,7 +68,12 @@
 }
 
 .modal__content {
+  margin-bottom: 36px;
   flex: 1 0 auto;
+
+  @media (max-width: $mobile-width) {
+    margin-bottom: 26px;
+  }
 }
 
 .modal__footer {
@@ -82,7 +87,7 @@
     position: absolute;
     width: 700px;
     height: 1px;
-    top: 20px;
+    top: -18px;
     background-color: $color-decore-line;
   }
 
@@ -94,12 +99,13 @@
     left: 0;
   }
 
-  @media (max-width: $tablet-width) {
-    padding-top: 35px;
-  }
 
   @media (max-width: $mobile-width) {
-    padding-top: 10px;
+
+    &::before,
+    &::after {
+      top: -22px;
+    }
   }
 }
 
@@ -124,7 +130,6 @@
   padding-right: 30px;
 
   @media (max-width: $mobile-width) {
-    margin-top: 10px;
     margin-bottom: 10px;
   }
 }
