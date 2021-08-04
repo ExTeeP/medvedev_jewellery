@@ -18,7 +18,7 @@
 .accordeon__header {
   position: relative;
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   font-weight: 500;
   font-size: 18px;
   line-height: 23px;
@@ -29,13 +29,14 @@
   }
 
   @media (max-width: $mobile-width) {
+    align-items: flex-start;
     font-size: 16px;
     line-height: 22px;
   }
 }
 
 .accordeon__content {
-  padding-left: 7px;
+  // padding-left: 7px;
   display: none;
   flex-direction: column;
   font-weight: normal;
@@ -43,14 +44,14 @@
   line-height: 21px;
 
   @media (max-width: $tablet-width) {
-    padding-top: 18px;
-    padding-bottom: 3px;
+    // padding-top: 18px;
+    // padding-bottom: 3px;
   }
 
   @media (max-width: $mobile-width) {
-    padding-top: 6px;
-    padding-bottom: 2px;
-    padding-left: 6px;
+    // padding-top: 6px;
+    // padding-bottom: 2px;
+    // padding-left: 6px;
     font-size: 14px;
     line-height: 20px;
   }
@@ -58,6 +59,7 @@
 
 .accordeon__toggle {
   margin-left: auto;
+  padding: 0;
   color: $color-accent;
   background-color: transparent;
   border: none;
@@ -83,7 +85,7 @@
 
   @media (max-width: $tablet-width) {
     width: 23px;
-    height: 12px;
+    height: 15px;
   }
 
   @media (max-width: $mobile-width) {

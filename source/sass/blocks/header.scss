@@ -177,8 +177,6 @@
 .header__search {
   margin-right: auto;
   padding-top: 3px;
-  width: 40%;
-  order: 1;
 
   @media (max-width: $tablet-width) {
     display: none;

@@ -3,15 +3,14 @@
 }
 
 .search__input {
-  padding: 0;
+  padding: 10px 0 9px;
   padding-left: 29px;
-  height: 40px;
   font-family: $main-font;
   font-weight: 500;
   font-size: 14px;
   line-height: 21px;
-  border: none;
   background-color: $color-white-a15;
+  border: none;
   border-radius: 21px;
 
   &:focus {

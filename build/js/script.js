@@ -62,12 +62,6 @@ document.documentElement.classList.remove('nojs');
       changeButtonLabel();
     };
 
-    var onMenuLinkClick = function (evt) {
-      if (evt.target.tagName === 'A') {
-        toggleShowMenu();
-      }
-    };
-
     var onMenuButtonClick = function () {
       toggleShowMenu();
     };
@@ -75,15 +69,12 @@ document.documentElement.classList.remove('nojs');
     var menuToggleHandlers = function () {
       if (window.innerWidth > MAX_WIDTH) {
         toggle.removeEventListener('click', onMenuButtonClick);
-        menu.removeEventListener('click', onMenuLinkClick);
       } else {
         toggle.addEventListener('click', onMenuButtonClick);
-        menu.addEventListener('click', onMenuLinkClick);
       }
     };
 
     toggle.addEventListener('click', onMenuButtonClick);
-    menu.addEventListener('click', onMenuLinkClick);
 
     menuToggleHandlers();
 
@@ -164,9 +155,13 @@ document.documentElement.classList.remove('nojs');
         },
 
         1024: {
+          enabled: true,
           spaceBetween: 30,
           slidesPerView: 3,
+          freeMode: true,
           direction: 'vertical',
+          watchSlidesVisibility: true,
+          watchSlidesProgress: true,
         },
       },
     });
@@ -218,11 +213,21 @@ document.documentElement.classList.remove('nojs');
 // Показ модального окна
 (function () {
 
+  // Закрытие меню сайта в мобильной версии при открытие модальных окон
+  var closeMenuBurger = function () {
+    if (document.querySelector('.header--menu-open')) {
+      document.querySelector('.header--menu-open').classList.remove('header--menu-open');
+      document.querySelector('.burger__active').classList.remove('burger__active');
+      document.querySelector('.navigation--menu-open').classList.remove('navigation--menu-open');
+    }
+  };
+
   // Открытыие модального окна
   var showModal = function (element) {
     document.documentElement.classList.add('page--100vh');
     element.classList.add('active-modal');
 
+    closeMenuBurger();
     document.addEventListener('keydown', onModalEscPress);
     element.addEventListener('click', onOverlayClick);
   };
@@ -284,6 +289,7 @@ document.documentElement.classList.remove('nojs');
   if (document.querySelector('#login-modal')) {
     var loginModal = document.querySelector('#login-modal');
     var loginOpenButton = document.querySelector('#login-button');
+    var loginOpenButtonMobile = document.querySelector('#login-button-mobile');
     var loginCloseButton = loginModal.querySelector('.modal__close-button');
     var loginField = loginModal.querySelector('#login-field');
     var isStorageSupport = true;
@@ -308,6 +314,11 @@ document.documentElement.classList.remove('nojs');
     };
 
     loginOpenButton.addEventListener('click', function (evt) {
+      evt.preventDefault();
+      showLoginModal(loginModal);
+    });
+
+    loginOpenButtonMobile.addEventListener('click', function (evt) {
       evt.preventDefault();
       showLoginModal(loginModal);
     });

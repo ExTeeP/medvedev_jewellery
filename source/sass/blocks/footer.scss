@@ -134,9 +134,6 @@
   @media (max-width: $tablet-width) {
     width: 84.6%;
   }
-
-  @media (max-width: $mobile-width) {
-  }
 }
 
 .footer__list {
@@ -186,7 +183,7 @@
   padding-right: 12%;
   padding-left: 8px;
 
-  @media (max-width: 1116.8px) {
+  @media (max-width: 1199.8px) {
     margin-right: auto;
     padding-right: 5%;
   }
@@ -206,7 +203,7 @@
   margin-right: auto;
   padding-right: 12%;
 
-  @media (max-width: 1116.8px) {
+  @media (max-width: 1199.8px) {
     padding-right: 5%;
   }
 

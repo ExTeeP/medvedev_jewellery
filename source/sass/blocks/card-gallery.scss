@@ -5,12 +5,13 @@
   gap: 30px;
 
   @media (max-width: $tablet-width) {
-    grid-template-columns: 1fr;
+    grid-template-columns: 319px;
     grid-template-rows: 286px 129px;
     gap: 14px;
   }
 
   @media (max-width: $mobile-width) {
+    grid-template-columns: minmax(290px, 384px);
     grid-template-rows: 260px;
     gap: 0;
   }
